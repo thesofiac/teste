@@ -95,6 +95,7 @@ y_test = test_df["sales"]
 
 with st.spinner("Treinando modelo..."):
     best_model = GradientBoostingRegressor(learning_rate=0.1, max_depth=3, n_estimators=100, subsample=1.0)
+    best_model.fit(X_train, y_train)
 
 # Previsões
 y_pred = best_model.predict(X_test)
