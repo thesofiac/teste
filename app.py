@@ -40,8 +40,8 @@ df["is_holiday"] = df["is_holiday"].fillna(0).astype("int8")
 store_options = sorted(df["store_nbr"].unique())
 family_options = sorted(df["family"].unique())
 
-store_selected = st.selectbox("Selecione a loja:", store_options)
-family_selected = st.selectbox("Selecione a categoria:", family_options)
+store_selected = st.selectbox("Selecione a loja:", store_options, index=49)
+family_selected = st.selectbox("Selecione a categoria:", family_options, index=12)
 
 # Filtragem
 df = df[(df["store_nbr"] == store_selected) & (df["family"] == family_selected)].copy()
