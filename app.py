@@ -12,7 +12,7 @@ st.title("📊 Previsão de Vendas - Loja 50 / GROCERY I")
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("train.csv")
+    df = pd.read_parquet("train.parquet")
     stores = pd.read_csv("stores.csv")
     holidays = pd.read_csv("holidays_events.csv")
 
