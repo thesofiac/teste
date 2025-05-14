@@ -6,6 +6,19 @@ from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 from sklearn.model_selection import GridSearchCV, TimeSeriesSplit
 
+st.sidebar.title("Menu")
+opcao = st.sidebar.selectbox("Escolha uma opção:", ["Entenda os Dados", "Preveja as Vendas", "Avalie o modelo"])
+
+if opcao == "Entenda os Dados":
+    st.title("Bem-vindo!")
+    st.write("Esta é a página inicial.")
+elif opcao == "Preveja as Vendas":
+    st.title("📊 Análise de Dados")
+    st.write("Coloque os gráficos aqui.")
+elif opcao == "Avalie o modelo":
+    st.title("ℹ️ Sobre")
+    st.write("Este app foi feito com Streamlit.")
+
 # Configuração da página
 st.set_page_config(page_title="📈 Previsão de Vendas", layout="centered")
 st.title("📈 Previsão de Vendas com Machine Learning")
