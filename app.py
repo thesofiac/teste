@@ -107,9 +107,6 @@ y_pred = np.where(y_pred < 0, 0, y_pred)
 mae = mean_absolute_error(y_test, y_pred)
 rmse = np.sqrt(mean_squared_error(y_test, y_pred))
 
-st.subheader("🔧 Melhores parâmetros do modelo")
-st.json(grid.best_params_)
-
 st.subheader("📏 Métricas de desempenho")
 st.metric("MAE", f"{mae:.2f}")
 st.metric("RMSE", f"{rmse:.2f}")
